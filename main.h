@@ -5,6 +5,7 @@
 #include <limits.h>
 #include <unistd.h>
 #include <stdarg.h>
+#include <stdlib.h>
 
 /**
  * struct fmt_op - function to check for formats
