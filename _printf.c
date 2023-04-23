@@ -62,6 +62,7 @@ int _printf(const char *format, ...)
 		{"d", print_int},
 		{"i", print_int},
 		{"u", print_un},
+		{"o", print_oct},
 		{NULL, NULL}
 	};
 
