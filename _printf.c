@@ -55,7 +55,7 @@ int _printf(const char *format, ...)
 {
 	int pr_count = 0;
 	va_list list;
-	
+
 	fmt_t funs[] = {
 		{"c", print_ch},
 		{"d", print_int},
@@ -63,7 +63,7 @@ int _printf(const char *format, ...)
 		{"u", print_un},
 		{NULL, NULL}
 	};
-	
+
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 
