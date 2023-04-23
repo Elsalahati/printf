@@ -25,5 +25,6 @@ int print_ch(va_list list);
 int print_str(va_list, list);
 int print_int(va_list list);
 int print_un(va_list list);
+int print_oct(va_list list);
 
 #endif
