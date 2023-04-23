@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 /**
  * get_fun - check the right specifier
  * to call its function
@@ -9,7 +8,8 @@
  * @funs: array of struct contains specifiers
  * with there print functions
  * Return: number of prints.
-*/
+ **/
+
 int get_fun(const char *format, va_list list, fmt_t *funs)
 {
 	int pr_count = 0, i = 0, j;
@@ -49,7 +49,7 @@ int get_fun(const char *format, va_list list, fmt_t *funs)
 /**
  * _printf - prints output according to format
  * @format: passed string
- * Return: number of prints
+ * Return: number of prints & -1 otherwise
  */
 int _printf(const char *format, ...)
 {
@@ -58,6 +58,7 @@ int _printf(const char *format, ...)
 
 	fmt_t funs[] = {
 		{"c", print_ch},
+		{"s", print_str},
 		{"d", print_int},
 		{"i", print_int},
 		{"u", print_un},
