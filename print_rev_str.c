@@ -4,7 +4,6 @@ int print_rev_str(va_list list)
 {
 	int pr_count = 0, i, len;
 	char *str;
-	char tmp;
 
 	str = va_arg(list, char*);
 

@@ -31,6 +31,7 @@ int print_un(va_list list);
 int print_oct(va_list list);
 int print_hex(va_list list);
 int print_hex_up(va_list list);
+int print_hex_num(unsigned int n);
 int print_exe_str(va_list list);
 int print_ptr(va_list list);
 int print_rev_str(va_list list);

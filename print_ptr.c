@@ -2,7 +2,29 @@
 
 int print_ptr(va_list list)
 {
-	int pr_count = 0;
+	void *ptr;
+	char *str = "(nil)";
+	long int a;
+	int b;
+	int i;
 
-	return (pr_count);
+	ptr = va_arg(list, void*);
+
+	if (ptr == NULL)
+	{
+		for (i = 0; str[i] != '\0'; i++)
+		{
+			_putchar(str[i]);
+		}
+		return (i);
+	}
+
+	a = (unsigned long int)ptr;
+
+	_putchar('0');
+	_putchar('x');
+
+	b = print_hex_num(a);
+
+	return (b + 2);
 }
