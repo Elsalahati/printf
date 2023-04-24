@@ -28,19 +28,22 @@ int get_fun(const char *format, va_list list, fmt_t *funs)
 				if (format[i] == '%')
 				{
 					pr_count += _putchar('%');
-					i++;
 					break;
 				}
 
 				else if (*(funs[j].op) == format[i])
 				{
 					pr_count += funs[j].f(list);
-					i++;
 					if (pr_count == -1)
 						return (-1);
 					break;
 				}
 				j++;
+			}
+			if (funs[j].op == NULL)
+			{
+				pr_count += _putchar('%');
+				pr_count += _putchar(format[i]);
 			}
 		}
 		else
