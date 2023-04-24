@@ -11,6 +11,7 @@ int print_int(va_list list)
 {
 	int n, exp = 1, pr_count = 0;
 	unsigned int cast;
+
 	n = va_arg(list, int);
 
 	if (n < 0)

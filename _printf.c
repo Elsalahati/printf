@@ -20,8 +20,6 @@ int get_fun(const char *format, va_list list, fmt_t *funs)
 		{
 			i++;
 			j = 0;
-			if (format[i] == '\0')
-				return (-1);
 
 			while (funs[j].op != NULL)
 			{
