@@ -18,15 +18,8 @@ int print_rev_str(va_list list)
 	else
 	{
 		len = strLen(str) - 1;
-		for (i = 0; str[i] != '\0'; i++)
-		{
-			printf("%c\n", str[len - i]);
-			tmp = str[len - i];	
-			printf("test");
-			str[len - i] = str[i];
-			printf("test");
-			str[i] = tmp;
-		}
+		for (i = len; str[i] != '\0'; i--)
+			_putchar(str[i]);
 	}
 
 	return (pr_count);
