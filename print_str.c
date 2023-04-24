@@ -8,11 +8,14 @@
 
 int print_str(va_list list)
 {
-	char *strptr;
+	int pr_count = 0;
+	char *str = va_arg(list, char*);
 
-	while (*strptr != '\0')
-	{
-		return (_putchar(va_arg(list, char *)));
-		strptr++;
-	}
+	if (str == NULL)
+		str = "(null)";
+
+	while (str[pr_count] != '\0')
+		pr_count += _putchar(str[pr_count]);
+
+	return (pr_count);
 }

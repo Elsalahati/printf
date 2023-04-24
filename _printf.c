@@ -61,8 +61,15 @@ int _printf(const char *format, ...)
 		{"s", print_str},
 		{"d", print_int},
 		{"i", print_int},
+		{"b", print_bin},
 		{"u", print_un},
 		{"o", print_oct},
+		{"x", print_hex},
+		{"X", print_hex_up},
+		{"S", print_exe_str},
+		{"p", print_ptr},
+		{"r", print_rev_str},
+		{"R", print_rot_str},
 		{NULL, NULL}
 	};
 
