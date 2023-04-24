@@ -47,12 +47,9 @@ int get_fun(const char *format, va_list list, fmt_t *funs)
 			}
 		}
 		else
-		{
 			pr_count += _putchar(format[i]);
-		}
 		i++;
 	}
-
 	return (pr_count);
 }
 
