@@ -1,5 +1,12 @@
 #include "main.h"
 
+
+/**
+ * print_rot_str - prints out string
+ * usnig rot 13 method
+ * @list: given list
+ * Return: number of prints
+*/
 int print_rot_str(va_list list)
 {
 	int pr_count = 0, i;

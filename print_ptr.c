@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+ * print_ptr - print out pointer address
+ * @list: given list
+ * Return: number of prints
+*/
 int print_ptr(va_list list)
 {
 	void *ptr;

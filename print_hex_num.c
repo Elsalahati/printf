@@ -1,10 +1,10 @@
 #include "main.h"
 
 
- /**
+/**
  * print_hex_num - covert given number to
  * hex and print it using _putchar function
- * @list: list given
+ * @n: number given
  * Return: number of prints
 */
 int print_hex_num(unsigned int n)
@@ -48,5 +48,3 @@ int print_hex_num(unsigned int n)
 	free(arr);
 	return (pr_count);
 }
-
-
