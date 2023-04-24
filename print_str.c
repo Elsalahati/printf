@@ -12,11 +12,8 @@ int print_str(va_list list)
 	char *str = va_arg(list, char*);
 
 	if (str == NULL)
-	{
-		_printf("(null)");
-		return (6);
-	}
-	
+		str = "(null)";
+
 	while (str[pr_count] != '\0')
 		pr_count += _putchar(str[pr_count]);
 
