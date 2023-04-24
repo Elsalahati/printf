@@ -20,6 +20,9 @@ int get_fun(const char *format, va_list list, fmt_t *funs)
 		{
 			i++;
 			j = 0;
+			if (format[i] == '\0')
+				return (-1);
+
 			while (funs[j].op != NULL)
 			{
 				if (format[i] == '%')
@@ -31,6 +34,8 @@ int get_fun(const char *format, va_list list, fmt_t *funs)
 				else if (*(funs[j].op) == format[i])
 				{
 					pr_count += funs[j].f(list);
+					if (pr_count == -1)
+						return (-1);
 					break;
 				}
 				j++;
