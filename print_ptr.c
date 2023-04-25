@@ -18,9 +18,8 @@ int print_ptr(va_list list)
 	if (ptr == NULL)
 	{
 		for (i = 0; str[i] != '\0'; i++)
-		{
 			_putchar(str[i]);
-		}
+		
 		return (i);
 	}
 

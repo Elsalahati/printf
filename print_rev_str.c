@@ -15,18 +15,13 @@ int print_rev_str(va_list list)
 	str = va_arg(list, char*);
 
 	if (str == NULL)
-	{
 		str = "(null)";
-		for (i = 0; str[i] != '\0'; i++)
-			pr_count += _putchar(str[i]);
-	}
 
-	else
-	{
-		len = strLen(str) - 1;
-		for (i = len; str[i] != '\0'; i--)
-			_putchar(str[i]);
-	}
+	for (len = 0; str[len] != '\0'; len++)
+	;
+
+	for (i = len - 1; str[i] != '\0'; i--)
+			pr_count += _putchar(str[i]);
 
 	return (pr_count);
 }

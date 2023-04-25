@@ -28,7 +28,7 @@ int print_exe_str(va_list list)
 				_putchar('0');
 				pr_count++;
 			}
-			pr_count = print_hex_num(str[i]);
+			pr_count += print_uhex_num(str[i]);
 		}
 		else
 		{
