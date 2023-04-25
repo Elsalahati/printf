@@ -9,9 +9,8 @@ int print_ptr(va_list list)
 {
 	void *ptr;
 	char *str = "(nil)";
-	long int a;
-	int b;
-	int i;
+	unsigned long int cast;
+	int pr_count = 0, i;
 
 	ptr = va_arg(list, void*);
 
@@ -19,16 +18,15 @@ int print_ptr(va_list list)
 	{
 		for (i = 0; str[i] != '\0'; i++)
 			_putchar(str[i]);
-		
+
 		return (i);
 	}
 
-	a = (unsigned long int)ptr;
+	cast = (unsigned long int)ptr;
 
-	_putchar('0');
-	_putchar('x');
+	pr_count += _putchar('0');
+	pr_count += _putchar('x');
+	pr_count += print_hex_num(cast);
 
-	b = print_hex_num(a);
-
-	return (b + 2);
+	return (pr_count);
 }

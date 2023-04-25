@@ -21,7 +21,7 @@ int print_rev_str(va_list list)
 	;
 
 	for (i = len - 1; str[i] != '\0'; i--)
-			pr_count += _putchar(str[i]);
+		pr_count += _putchar(str[i]);
 
 	return (pr_count);
 }

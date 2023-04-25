@@ -2,7 +2,7 @@
 
 
 /**
- * print_hex_num - covert given number to
+ * print_uhex_num - covert given number to
  * hex and print it using _putchar function
  * @n: number given
  * Return: number of prints
