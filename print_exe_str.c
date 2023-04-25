@@ -9,7 +9,7 @@
 int print_exe_str(va_list list)
 {
 	char *str;
-	int i, pr_count = 0, cast;
+	int i, pr_count = 0;
 
 	str = va_arg(list, char *);
 
@@ -23,13 +23,12 @@ int print_exe_str(va_list list)
 			_putchar('\\');
 			_putchar('x');
 			pr_count += 2;
-			cast = str[i];
-			if (cast < 16)
+			if (str[i] < 16)
 			{
 				_putchar('0');
 				pr_count++;
 			}
-			pr_count = print_hex_num(cast);
+			pr_count = print_hex_num(str[i]);
 		}
 		else
 		{

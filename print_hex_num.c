@@ -42,7 +42,7 @@ int print_hex_num(unsigned int n)
 		if (arr[i] <= 9)
 			_putchar(arr[i] + '0');
 		else
-			_putchar((arr[i] % 10) + 'a');
+			_putchar((arr[i] % 10) + 'A');
 	}
 
 	free(arr);
